@@ -12,7 +12,7 @@
 	
 	$active_clientes="active";
 
-	$title="Vendedor | Baterias Ecuador";
+	$title="Productos | Baterias Ecuador";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,25 +32,25 @@
         <div class="panel panel-info">
             <div class="panel-heading">
                 <div class="btn-group pull-right">
-                    <button type='button' class="btn btn-info" data-toggle="modal" data-target="#nuevoUsuario"><span
-                            class="glyphicon glyphicon-plus"></span> Nuevo Vendedor</button>
+                    <button type='button' class="btn btn-info" data-toggle="modal" data-target="#nuevoProducto"><span
+                            class="glyphicon glyphicon-plus"></span> Nuevo Producto</button>
                 </div>
-                <h4><i class='glyphicon glyphicon-search'></i> Buscar Vendedor</h4>
+                <h4><i class='glyphicon glyphicon-search'></i> Buscar Producto</h4>
             </div>
             <div class="panel-body">
 
 
 
                 <?php
-				include("modal/usuario/registro_usuarios.php");
-				include("modal/usuario/editar_usuarios.php");
+				include("modal/producto/registro_productos.php");
+				include("modal/producto/editar_productos.php");
 			?>
                 <form class="form-horizontal" role="form" id="datos_cotizacion">
 
                     <div class="form-group row">
-                        <label for="q" class="col-md-2 control-label">Vendedor</label>
+                        <label for="q" class="col-md-2 control-label">Producto</label>
                         <div class="col-md-5">
-                            <input type="text" class="form-control" id="q" placeholder="Nombre vendedor"
+                            <input type="text" class="form-control" id="q" placeholder="Nombre producto"
                                 onkeyup='load(1);'>
                         </div>
                         <div class="col-md-3">
@@ -82,9 +82,7 @@
 		$('#facturacion').removeClass('activarnav');
 	}
     </script>
-    <script type="text/javascript" src="js/vendedor/vendedores.js"></script>
-<!--     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+    <script type="text/javascript" src="js/producto/productos.js"></script>
 </body>
 
 </html>

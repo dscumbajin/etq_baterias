@@ -26,7 +26,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="usuarios.php"><span class="activarnav historico activarbarra" id="historico">Usuarios</span> <span class="sr-only" style="display:none">(current)</span></a></li>
 
-						<li><a href="baterias.php"><span class=" nuevo activarbarra " id="presupuesto"></span> Baterias </a></li>
+						<li><a href="productos.php"><span class=" nuevo activarbarra " id="presupuesto"></span> Baterias </a></li>
 
 						<li class="desaparecer"><a class="linea"><span>|</span></a></li>
 						<li> <a href="#"><?php echo '<span class="badge badge-primary">Usuario: </span>' . $_SESSION['user_name']; ?> </a></li>
