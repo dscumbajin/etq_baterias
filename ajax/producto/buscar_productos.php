@@ -119,7 +119,11 @@ if ($action == 'ajax') {
 						<td><?php echo $estado_bater; ?></td>
 						<td><span>
 								<a href="#" title='Editar producto' onclick="obtener_datos('<?php echo $id; ?>');" data-toggle="modal" data-target="#modProducto"><i class="glyphicon glyphicon-edit"></i></a>
-								<a href="#" title='Borrar producto' onclick="eliminar('<?php echo $id; ?>')"><i class="glyphicon glyphicon-trash" style="color: red;"></i> </a>
+								<?php if ($_SESSION['user_name'] == 'soporte') { ?>
+									<a href="#" title='Borrar producto' onclick="eliminar('<?php echo $id; ?>')"><i class="glyphicon glyphicon-trash" style="color: red;"></i> </a>
+
+								<?php } ?>
+
 							</span>
 						</td>
 

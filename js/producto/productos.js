@@ -112,6 +112,14 @@
 		    $("#codigoLP").val(value);
 		});
 
+		$("#mod_nombProducto").on("input", function() {
+		    var value = $(this).val();
+		    $("#mod_nombProdNeural").val(value);
+		    $("#mod_modelo").val(value);
+		    $("#mod_codigoLP").val(value);
+		});
+
+
 		$("#close").click(function() {
 		    $("#nombProducto").val('');
 		    $("#nombProdNeural").val('');
