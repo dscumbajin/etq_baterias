@@ -1469,12 +1469,3 @@
         text-align: center;
       }
     </style>
-
-    <script>
-      function activarfacturacion() {
-        $('#historico').removeClass('activarnav');
-        $('#nuevo').removeClass('activarnav');
-        $('#cliente').removeClass('activarnav');
-        $('#facturacion').addClass('activarnav');
-      }
-    </script>

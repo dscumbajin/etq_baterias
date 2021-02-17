@@ -31,7 +31,7 @@ if ($action == 'ajax') {
 	// escaping, additionally removing everything that could be (html/javascript-) code
 	// idUsu, usuario, nombreUsu, password, mail, idestado
 	$q = mysqli_real_escape_string($con, (strip_tags($_REQUEST['q'], ENT_QUOTES)));
-	$aColumns = array('nombProducto', 'modelo', 'tipo_bater'); //Columnas de busqueda
+	$aColumns = array('nombProducto', 'codigo_inicio', 'modelo', 'tipo_bater'); //Columnas de busqueda
 	$sTable = "bateria";
 	$sWhere = "";
 	if ($_GET['q'] != "") {
@@ -59,6 +59,8 @@ if ($action == 'ajax') {
 	$sql = "SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
 	$query = mysqli_query($con, $sql);
 	//loop through fetched data
+
+
 	if ($numrows > 0) {
 
 	?>

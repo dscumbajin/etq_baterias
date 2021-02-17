@@ -57,13 +57,13 @@
 		    event.preventDefault();
 		})
 
-		$("#editar_usuario").submit(function(event) {
+		$("#editar_producto").submit(function(event) {
 		    $('#actualizar_datos').attr("disabled", true);
 
 		    var parametros = $(this).serialize();
 		    $.ajax({
 		        type: "POST",
-		        url: "ajax/usuario/editar_usuario.php",
+		        url: "ajax/producto/editar_producto.php",
 		        data: parametros,
 		        beforeSend: function(objeto) {
 		            $("#resultados_ajax2").html("Mensaje: Cargando...");

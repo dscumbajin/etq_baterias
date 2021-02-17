@@ -26,9 +26,27 @@ if (empty($_POST['nombProducto'])) {
 	$codigo_inicio = mysqli_real_escape_string($con, (strip_tags($_POST["codigo_inicio"], ENT_QUOTES)));
 	$tipo_bater = mysqli_real_escape_string($con, (strip_tags($_POST["tipo_bater"], ENT_QUOTES)));
 	$estado_bater = intval($_POST['estado_bater']);
+	/*
+	$sql1 = "SELECT * from bateria WHERE codigo_inicio = $codigo_inicio";
+	$query_select = mysqli_query($con, $sql1);
+	while ($row = mysqli_fetch_array($query_select)) {
+		$id = $row['codigo_inicio'];
+	}
+	if (isset($id)) {
+		$errors[] = " Ya existe un codigo de garantia " .  $codigo_inicio;
+	} else {
+		 $sql = "INSERT INTO bateria (codCrm, codNeural, nombProducto, nombProdNeural, modelo, codigoLP, codigo_inicio, tipo_bater, estado_bater ) 
+		VALUES ('$codCrm','$codNeural','$nombProducto','$nombProdNeural','$modelo','$codigoLP','$codigo_inicio','$tipo_bater','$estado_bater')";
+		$query_new_insert = mysqli_query($con, $sql);
+		if ($query_new_insert) {
+			$messages[] = " Producto ingresado satisfactoriamente.";
+		} else {
+			$errors[] = " Lo siento algo ha salido mal intenta nuevamente." . mysqli_error($con);
+		} 
+	}*/
 
 	$sql = "INSERT INTO bateria (codCrm, codNeural, nombProducto, nombProdNeural, modelo, codigoLP, codigo_inicio, tipo_bater, estado_bater ) 
-	VALUES ('$codCrm','$codNeural','$nombProducto','$nombProdNeural','$modelo','$codigoLP','$codigo_inicio','$tipo_bater','$estado_bater')";
+		VALUES ('$codCrm','$codNeural','$nombProducto','$nombProdNeural','$modelo','$codigoLP','$codigo_inicio','$tipo_bater','$estado_bater')";
 	$query_new_insert = mysqli_query($con, $sql);
 	if ($query_new_insert) {
 		$messages[] = " Producto ingresado satisfactoriamente.";

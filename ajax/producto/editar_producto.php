@@ -22,28 +22,21 @@ if (empty($_POST['mod_id'])) {
 
 
 
-	$mod_codCrm = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
-	$mod_nombProducto = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
-	$mod_nombProdNeural = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
-	$mod_modelo = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
-	$mod_codigoLP = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
-	$mod_codigo_inicio = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
-	$mod_tipo_bater = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
-	$mod_estado = intval($_POST['mod_perfil']);
-	$mod_id = intval($_POST['mod_perfil']);
-
-
-
-	$usuario = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
-	$nombre = mysqli_real_escape_string($con, (strip_tags($_POST["mod_nombre"], ENT_QUOTES)));
-	$email = mysqli_real_escape_string($con, (strip_tags($_POST["mod_email"], ENT_QUOTES)));
-	$perfil = intval($_POST['mod_perfil']);
-
-	$id_usuario = intval($_POST['mod_id']);
-	$sql = "UPDATE admins SET usuario='" . $usuario . "', nombreUsu='" . $nombre . "', mail='" . $email . "', idPerfil='" . $perfil . "' WHERE idUsu='" . $id_usuario . "'";
+	$codCrm = mysqli_real_escape_string($con, (strip_tags($_POST["mod_codCrm"], ENT_QUOTES)));
+	$codNeural = mysqli_real_escape_string($con, (strip_tags($_POST["mod_codNeural"], ENT_QUOTES)));
+	$nombProducto = mysqli_real_escape_string($con, (strip_tags($_POST["mod_nombProducto"], ENT_QUOTES)));
+	$nombProdNeural = mysqli_real_escape_string($con, (strip_tags($_POST["mod_nombProdNeural"], ENT_QUOTES)));
+	$modelo = mysqli_real_escape_string($con, (strip_tags($_POST["mod_modelo"], ENT_QUOTES)));
+	$codigoLP = mysqli_real_escape_string($con, (strip_tags($_POST["mod_codigoLP"], ENT_QUOTES)));
+	$codigo_inicio = mysqli_real_escape_string($con, (strip_tags($_POST["mod_codigo_inicio"], ENT_QUOTES)));
+	$tipo_bater = mysqli_real_escape_string($con, (strip_tags($_POST["mod_tipo_bater"], ENT_QUOTES)));
+	$estado = intval($_POST['mod_estado']);
+	$id_bateria = intval($_POST['mod_id']);
+	
+	$sql = "UPDATE bateria SET codCrm='" . $codCrm . "', codNeural='" . $codNeural . "', nombProducto='" . $nombProducto . "', nombProdNeural='" . $nombProdNeural . "', modelo='" . $modelo . "', codigoLP='" . $codigoLP . "', codigo_inicio='" . $codigo_inicio . "', tipo_bater='" . $tipo_bater . "', estado_bater='" . $estado . "' WHERE id_bateria='" . $id_bateria . "'";
 	$query_update = mysqli_query($con, $sql);
 	if ($query_update) {
-		$messages[] = "Usuario ha sido actualizado satisfactoriamente.";
+		$messages[] = "Producto actualizado satisfactoriamente.";
 	} else {
 		$errors[] = "Lo siento algo ha salido mal intenta nuevamente." . mysqli_error($con);
 	}
