@@ -10,8 +10,6 @@
 	require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 	require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 	
-	$active_clientes="active";
-
 	$title="Productos | Baterias Ecuador";
 ?>
 <!DOCTYPE html>
@@ -75,11 +73,11 @@
     <?php
 	include("footer.php");
 	?>
-    <script>
-    if ($('#usuarios').hasClass('activarnav')) {
-        $('#usuarios').removeClass('activarnav');
-        $('#productos').addClass('activarnav');
-    }
+   <script>
+    if($('#usuarios').hasClass('activarnav')){
+		$('#usuarios').removeClass('activarnav');
+		$('#productos').addClass('activarnav');
+	}
     </script>
     
     <script type="text/javascript" src="js/producto/productos.js"></script>
