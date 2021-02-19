@@ -138,7 +138,7 @@ if ($login->isUserLoggedIn() == true) {
 			}
 
 			.acciones button {
-				flex: 0 1 46% !important;
+				/* flex: 0 1 46% !important; */
 				cursor: pointer;
 				padding: 10px 20px !important;
 				width: 100%;

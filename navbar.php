@@ -24,12 +24,11 @@
 					<ul class="nav navbar-nav">
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
+						
+						<li><a href="productos.php"><span class=" activarnav productos activarbarra " id="productos">Baterias</span> <span class="sr-only" style="display:none">(current)</span> </a></li>
 						<?php if ($_SESSION['user_name'] == 'soporte') { ?>
-							<li><a href="usuarios.php"><span class=" nuevo activarbarra" id="usuarios">Usuarios</span> <span class="sr-only" style="display:none">(current)</span></a></li>
+							<li><a href="usuarios.php"><span class=" nuevo activarbarra" id="usuarios">Usuarios</span> </a></li>
 						<?php } ?>
-
-						<li><a href="productos.php"><span class=" activarnav productos activarbarra " id="productos"></span> Baterias </a></li>
-
 						<li class="desaparecer"><a class="linea"><span>|</span></a></li>
 						<li> <a href="#"><?php echo '<span class="badge badge-primary">Usuario: </span>' . $_SESSION['user_name']; ?> </a></li>
 						<li><a href="#"><?php echo $_SESSION['user_email']; ?> <i style="margin-left:5px;" class="glyphicon glyphicon-user"></i></a></li>
