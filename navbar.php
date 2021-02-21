@@ -24,7 +24,7 @@
 					<ul class="nav navbar-nav">
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						
+						<li><a href="home.php"><span class=" nuevo activarbarra" id="home">Home</span> </a></li>
 						<li><a href="productos.php"><span class=" activarnav productos activarbarra " id="productos">Baterias</span> <span class="sr-only" style="display:none">(current)</span> </a></li>
 						<?php if ($_SESSION['user_name'] == 'soporte') { ?>
 							<li><a href="usuarios.php"><span class=" nuevo activarbarra" id="usuarios">Usuarios</span> </a></li>

@@ -74,11 +74,12 @@ $title = "Usuarios | Baterias Ecuador";
     include("footer.php");
     ?>
 
-<script>
-    if($('#productos').hasClass('activarnav')){
-		$('#productos').removeClass('activarnav');
-		$('#usuarios').addClass('activarnav');
-	}
+    <script>
+        if ($('#productos').hasClass('activarnav')) {
+            $('#productos').removeClass('activarnav');
+            $('#home').removeClass('activarnav');
+            $('#usuarios').addClass('activarnav');
+        }
     </script>
 
     <script type="text/javascript" src="js/usuario/usuarios.js"></script>

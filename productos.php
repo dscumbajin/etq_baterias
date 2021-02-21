@@ -76,7 +76,9 @@
    <script>
     if($('#usuarios').hasClass('activarnav')){
 		$('#usuarios').removeClass('activarnav');
+        $('#home').removeClass('activarnav');
 		$('#productos').addClass('activarnav');
+        
 	}
     </script>
     
