@@ -12,7 +12,7 @@ require_once("config/conexion.php"); //Contiene funcion que conecta a la base de
 
 $active_clientes = "active";
 
-$title = "Usuarios | Baterias Ecuador";
+$title = "Home | Baterias Ecuador";
 ?>
 <!DOCTYPE html>
 <html lang="en">
