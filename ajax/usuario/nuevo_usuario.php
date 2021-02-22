@@ -15,10 +15,11 @@ elseif (empty($_POST['nombre'])) {
 
 	$usuario = mysqli_real_escape_string($con, (strip_tags($_POST["usuario"], ENT_QUOTES)));
 	$nombre = mysqli_real_escape_string($con, (strip_tags($_POST["nombre"], ENT_QUOTES)));
+	$password = mysqli_real_escape_string($con, (strip_tags($_POST["password"], ENT_QUOTES)));
 	$email = mysqli_real_escape_string($con, (strip_tags($_POST["email"], ENT_QUOTES)));
-	$perfil = intval($_POST['perfil']);
+	$estado = intval($_POST['estado']);
 
-	$sql = "INSERT INTO admins (usuario , nombreUsu , mail , idPerfil ) VALUES ('$usuario','$nombre','$email','$perfil')";
+	$sql = "INSERT INTO usuario (nom_user ,nick ,pass, mail_user , est_user ) VALUES ('$nombre','$usuario','$password','$email','$estado')";
 	$query_new_insert = mysqli_query($con, $sql);
 	if ($query_new_insert) {
 		$messages[] = "Usuario ha sido ingresado satisfactoriamente.";

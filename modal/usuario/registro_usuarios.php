@@ -28,7 +28,12 @@
 	                            <input type="text" class="form-control" id="nombre" name="nombre" required>
 	                        </div>
 	                    </div>
-
+						<div class="form-group">
+	                        <label for="password" class="col-sm-3 control-label">Password</label>
+	                        <div class="col-sm-8">
+	                            <input type="password" class="form-control" id="password" name="password" required>
+	                        </div>
+	                    </div>
 
 	                    <div class="form-group">
 	                        <label for="email" class="col-sm-3 control-label">Email</label>
@@ -40,12 +45,12 @@
 
 
 	                    <div class="form-group">
-	                        <label for="perfil" class="col-sm-3 control-label">Perfil</label>
+	                        <label for="estado" class="col-sm-3 control-label">Estado</label>
 	                        <div class="col-sm-8">
-	                            <select class="form-control" id="perfil" name="perfil" required>
+	                            <select class="form-control" id="estado" name="estado" required>
 	                                <option value="">-- Selecciona estado --</option>
-	                                <option value="1" selected>User</option>
-	                                <option value="2">Administrador</option>
+	                                <option value="1" selected>Activo</option>
+	                                <option value="0">Inactivo</option>
 	                            </select>
 	                        </div>
 	                    </div>

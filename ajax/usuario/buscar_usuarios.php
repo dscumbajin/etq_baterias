@@ -7,9 +7,9 @@ require_once("../../config/conexion.php"); //Contiene funcion que conecta a la b
 
 $action = (isset($_REQUEST['action']) && $_REQUEST['action'] != NULL) ? $_REQUEST['action'] : '';
 if (isset($_GET['id'])) {
-	$id_admin = $_GET['id'];
+	$id_usuario = $_GET['id'];
 
-	if ($delete1 = mysqli_query($con, "DELETE FROM admins WHERE idUsu='" . $id_admin . "'")) {
+	if ($delete1 = mysqli_query($con, "DELETE FROM usuario WHERE id_usuario='" . $id_usuario . "'")) {
 ?>
 		<div class="alert alert-success alert-dismissible" role="alert">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -68,6 +68,7 @@ if ($action == 'ajax') {
 
 					<th>Nombre</th>
 					<th>Usuario</th>
+					<th>Password</th>
 					<th>Email</th>
 					<th>Estado</th>
 					<th>Acciones</th>
@@ -79,6 +80,7 @@ if ($action == 'ajax') {
 					$id_usuario = $row['id_usuario'];
 					$usuario_usuario = $row['nick'];
 					$nombre_usuario = $row['nom_user'];
+					$pass_usuario = $row['pass'];
 					$email_usuario = $row['mail_user'];
 					$estado_usuario = $row['est_user'];
 					if ($estado_usuario == 1) {
@@ -90,12 +92,14 @@ if ($action == 'ajax') {
 
 					<input type="hidden" value="<?php echo $usuario_usuario; ?>" id="usuario_usuario<?php echo $id_usuario; ?>">
 					<input type="hidden" value="<?php echo $nombre_usuario; ?>" id="nombre_usuario<?php echo $id_usuario; ?>">
+					<input type="hidden" value="<?php echo $pass_usuario; ?>" id="pass_usuario<?php echo $id_usuario; ?>">
 					<input type="hidden" value="<?php echo $email_usuario; ?>" id="email_usuario<?php echo $id_usuario; ?>">
 					<input type="hidden" value="<?php echo $estado_usuario; ?>" id="estado_usuario<?php echo $id_usuario; ?>">
 
 					<tr>
 						<td><?php echo $nombre_usuario; ?></td>
 						<td><?php echo $usuario_usuario; ?></td>
+						<td><?php echo $pass_usuario; ?></td>
 						<td><?php echo $email_usuario; ?></td>
 						<td><?php echo $estado; ?></td>
 						<td><span>

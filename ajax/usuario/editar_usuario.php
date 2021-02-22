@@ -7,13 +7,13 @@ if (empty($_POST['mod_id'])) {
 	$errors[] = "Usuario vacío";
 } else if (empty($_POST['mod_nombre'])) {
 	$errors[] = "Nombre vacío";
-}  else if ($_POST['mod_perfil'] == "") {
+}  else if ($_POST['mod_estado'] == "") {
 	$errors[] = "Selecciona el perfil del Usuario";
 } else if (
 	!empty($_POST['mod_id']) &&
 	!empty($_POST['mod_usuario']) &&
 	!empty($_POST['mod_nombre']) &&
-	$_POST['mod_perfil'] != ""
+	$_POST['mod_estado'] != ""
 ) {
 	/* Connect To Database*/
 	require_once("../../config/db.php"); //Contiene las variables de configuracion para conectar a la base de datos
@@ -21,11 +21,12 @@ if (empty($_POST['mod_id'])) {
 	// escaping, additionally removing everything that could be (html/javascript-) code
 	$usuario = mysqli_real_escape_string($con, (strip_tags($_POST["mod_usuario"], ENT_QUOTES)));
 	$nombre = mysqli_real_escape_string($con, (strip_tags($_POST["mod_nombre"], ENT_QUOTES)));
+	$pass = mysqli_real_escape_string($con, (strip_tags($_POST["mod_pass"], ENT_QUOTES)));
 	$email = mysqli_real_escape_string($con, (strip_tags($_POST["mod_email"], ENT_QUOTES)));
-	$perfil = intval($_POST['mod_perfil']);
+	$estado = intval($_POST['mod_estado']);
 
 	$id_usuario = intval($_POST['mod_id']);
-	$sql = "UPDATE admins SET usuario='" . $usuario . "', nombreUsu='" . $nombre . "', mail='" . $email . "', idPerfil='" . $perfil . "' WHERE idUsu='" . $id_usuario . "'";
+	$sql = "UPDATE usuario SET nom_user='" . $nombre . "', nick='" . $usuario . "', pass='" . $pass . "', mail_user='" . $email . "', est_user='" . $estado . "' WHERE id_usuario='" . $id_usuario . "'";
 	$query_update = mysqli_query($con, $sql);
 	if ($query_update) {
 		$messages[] = "Usuario ha sido actualizado satisfactoriamente.";

@@ -7,7 +7,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Editar cliente</h4>
+						<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Editar usuario</h4>
 					</div>
 					<div class="modal-body">
 						<form class="form-horizontal" method="post" id="editar_usuario" name="editar_usuario">
@@ -28,6 +28,13 @@
 								
 								</div>
 							</div>
+							<div class="form-group">
+								<label for="mod_pass" class="col-sm-3 control-label">Password</label>
+								<div class="col-sm-8">
+									<input type="password" class="form-control" id="mod_pass" name="mod_pass" required>
+								
+								</div>
+							</div>
 						
 							<div class="form-group">
 								<label for="mod_email" class="col-sm-3 control-label">Email</label>
@@ -37,12 +44,12 @@
 							</div>
 
 							<div class="form-group">
-								<label for="mod_perfil" class="col-sm-3 control-label">Perfil</label>
+								<label for="mod_estado" class="col-sm-3 control-label">Estado</label>
 								<div class="col-sm-8">
-									<select class="form-control" id="mod_perfil" name="mod_perfil" required>
+									<select class="form-control" id="mod_estado" name="mod_estado" required>
 										<option value="">-- Selecciona estado --</option>
-										<option value="1" selected>User</option>
-										<option value="2">Administrador</option>
+										<option value="1" selected>Activo</option>
+										<option value="0">Inactivo</option>
 									</select>
 								</div>
 							</div>
