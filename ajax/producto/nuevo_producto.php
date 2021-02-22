@@ -32,7 +32,7 @@ if (empty($_POST['nombProducto'])) {
 	$row = mysqli_fetch_array($count_query);
 	$numrows = $row['numrows'];
 
-	if ($numrows < 0) {
+	if ($numrows <= 0) {
 		$sql = "INSERT INTO bateria (codCrm, codNeural, nombProducto, nombProdNeural, modelo, codigoLP, codigo_inicio, tipo_bater, estado_bater ) 
 		VALUES ('$codCrm','$codNeural','$nombProducto','$nombProdNeural','$modelo','$codigoLP','$codigo_inicio','$tipo_bater','$estado_bater')";
 		$query_new_insert = mysqli_query($con, $sql);

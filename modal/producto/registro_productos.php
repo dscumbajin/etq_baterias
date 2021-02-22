@@ -16,14 +16,14 @@
 							<div class="form-group">
 								<label for="codCrm" class="col-sm-3 control-label">Código CRM</label>
 								<div class="col-sm-8">
-									<input type="text" class="form-control" id="codCrm" name="codCrm" >
+									<input type="text" class="form-control" id="codCrm" name="codCrm" placeholder="Opcional">
 								</div>
 							</div>
 
 							<div class="form-group">
 								<label for="codNeural" class="col-sm-3 control-label">Código Neural</label>
 								<div class="col-sm-8">
-									<input type="text" class="form-control" id="codNeural" name="codNeural" >
+									<input type="text" class="form-control" id="codNeural" name="codNeural" placeholder="Opcional" >
 								</div>
 							</div>
 
