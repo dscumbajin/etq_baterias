@@ -83,7 +83,7 @@
     </script>
     
     <script type="text/javascript" src="js/producto/productos.js"></script>
-    <script type="text/javascript" src="js/usuario/usuarios.js"></script>
+  
       
 </body>
 
