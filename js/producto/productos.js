@@ -125,16 +125,16 @@
 		    $("#nombProdNeural").val('');
 		    $("#modelo").val('');
 		    $("#codigoLP").val('');
-		    $("codigo_inicio").val('');
-		    $("tipo_bater").val('');
-		    $("estado_bater").val('');
+		    $("#codigo_inicio").val('');
+		    $("#tipo_bater").val('');
+		    $("#estado_bater").val('');
 		});
 		$("#closeM").click(function() {
 		    $("#nombProducto").val('');
 		    $("#nombProdNeural").val('');
 		    $("#modelo").val('');
 		    $("#codigoLP").val('');
-		    $("codigo_inicio").val('');
-		    $("tipo_bater").val('');
-		    $("estado_bater").val('');
+		    $("#codigo_inicio").val('');
+		    $("#tipo_bater").val('');
+		    $("#estado_bater").val('');
 		});

@@ -12,7 +12,7 @@ require_once("config/conexion.php"); //Contiene funcion que conecta a la base de
 
 $active_clientes = "active";
 
-$title = "Home | Baterias Ecuador";
+$title = "ETQ-Garantias | Baterias Ecuador";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,10 +29,10 @@ $title = "Home | Baterias Ecuador";
     ?>
 
     <div class="container" style="text-align:center;">
-        
-            <h1>SISTEMA DE ETIQUETAS</h1> 
-            <img src="img/bater_etiqueta.png" class="app-logo" alt="Logotipo" />
-            <h2>Administración de información</h2>
+
+        <h1>SISTEMA DE ETIQUETAS</h1>
+        <img src="img/bater_etiqueta.png" class="app-logo" alt="Logotipo" />
+        <h2>Administración de información</h2>
     </div>
     <hr>
     <?php
@@ -45,7 +45,7 @@ $title = "Home | Baterias Ecuador";
             $('#home').addClass('activarnav');
         }
     </script>
-
+    <script type="text/javascript" src="js/usuario/usuarios.js"></script>
 </body>
 
 </html>

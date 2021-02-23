@@ -83,6 +83,8 @@ $title = "Usuarios | Baterias Ecuador";
     </script>
 
     <script type="text/javascript" src="js/usuario/usuarios.js"></script>
+    <script type="text/javascript" src="js/usuario/usuarios.js"></script>
+    
 </body>
 
 </html>
